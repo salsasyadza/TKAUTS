@@ -1,0 +1,105 @@
+:root {
+  --primary: #e63946; /* Merah terang */
+  --secondary: #f1a1a8; /* Pink lembut */
+  --danger: #d90429;
+  --success: #4cc9f0;
+  --dark: #6a040f; /* Merah tua */
+  --light: #fff0f3; /* Warna dasar lembut */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #fff0f3, #ffe3e3); /* Gradasi merah muda */
+}
+
+/* Layout */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: linear-gradient(to bottom, var(--dark), var(--primary));
+  color: white;
+  padding: 1rem;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--primary), var(--danger));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #d90429, #a4161a);
+}
+
+.btn-edit {
+  color: var(--primary);
+}
+
+.btn-delete {
+  color: var(--danger);
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+dialog {
+  animation: fadeIn 0.3s ease-out;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
